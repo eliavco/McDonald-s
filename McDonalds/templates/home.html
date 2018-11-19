@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block body_block %}
+  <div class="jumbotron">
+    <h1 class="display-4">Welcome to McDonald's</h1>
+    <p class="lead">You have a bunch of functions in this site. You can control the DataBase by signing up, and see a few pictures in the gallery...</p>
+    <hr class="my-4">
+    <p>If you want to see the list of restaurants around the world, click here!</p>
+    <a class="btn btn-primary btn-lg" href="{% url 'home:list' %}" role="button">Go to List!</a>
+  </div>
+{% endblock %}

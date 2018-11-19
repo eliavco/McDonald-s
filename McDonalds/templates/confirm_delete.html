@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block body_block %}
+  <div class="jumbotron">
+    <h1 class="display-4">Delete the Branch {{restaurant.name}}?</h1>
+    <p> </p>
+    <form method="post">
+      {% csrf_token %}
+      <input type="submit" class="btn btn-danger" value="Delete">
+      <a href="{% url 'home:list' %}"><button type="button" class="btn btn-secondary">Cancel</button></a>
+    </form>
+  </div>
+{% endblock %}

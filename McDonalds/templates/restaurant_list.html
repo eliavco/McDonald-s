@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block body_block %}
+  <div class="jumbotron">
+    <h1 class="display-4">Welcome to the Branches' List!</h1>
+    <p> </p>
+      <ol>
+        {% for restaurant in restaurant_list %}
+          <h2><li class="lead"><a href="{{restaurant.id}}/">{{restaurant.name}}</a></li></h2>
+        {% endfor %}
+      </ol>
+    <p> </p>
+    <p> </p>
+    <a href="{% url 'home:create' %}"><button type="button" class="btn btn-success"><i class="fas fa-plus-square"></i> Create</button></a>
+  </div>
+{% endblock %}

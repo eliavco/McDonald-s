@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+{% block body_block %}
+  <div class="container">
+  <div class="container">
+  <div class="container">
+  <div class="container">
+    <div class="gallery">
+      <a target="_blank" href="{% static 'images/burger.png' %}">
+        <img src="{% static 'images/burger.png' %}" alt="Burger" width="300" height="200">
+      </a>
+      <div class="desc" id="cheeseburger">Our Cheeseburger!</div>
+    </div>
+
+    <div class="gallery">
+      <a target="_blank" href="{% static 'images/branch.jpg' %}">
+        <img src="{% static 'images/branch.jpg' %}" alt="branch" width="300" height="200">
+      </a>
+      <div class="desc" id="branch">Here is a Branch of McDonald's</div>
+    </div>
+
+    <div class="gallery">
+      <a target="_blank" href="{% static 'images/guacamole.jpg' %}">
+        <img src="{% static 'images/guacamole.jpg' %}" alt="guacamole" width="300" height="200">
+      </a>
+      <div class="desc" id="guacamole">Adding Guacamole to our Burgers</div>
+    </div>
+
+    <div class="gallery">
+      <a target="_blank" href="{% static 'images/french_fries.jpg' %}">
+        <img src="{% static 'images/french_fries.jpg' %}" alt="French Fries" width="300" height="200">
+      </a>
+      <div class="desc" id="french_fries">Our French Fries!</div>
+    </div>
+
+    <div class="gallery">
+      <a target="_blank" href="{% static 'images/icecream.png' %}">
+        <img src="{% static 'images/icecream.png' %}" alt="Ice Cream" width="300" height="200">
+      </a>
+      <div class="desc" id="icecream">Our Delicious Ice Cream!</div>
+    </div>
+
+    <div class="gallery">
+      <a target="_blank" href="{% static 'images/app.jpg' %}">
+        <img src="{% static 'images/app.jpg' %}" alt="App" width="300" height="200">
+      </a>
+      <div class="desc" id="app">Our New App! Now You Can Order Online!</div>
+    </div>
+
+    <div class="gallery">
+      <a target="_blank" href="{% static 'images/coffee.jpg' %}">
+        <img src="{% static 'images/coffee.jpg' %}" alt="Mcafe" width="300" height="200">
+      </a>
+      <div class="desc" id="coffee">Our Coffee!</div>
+    </div>
+
+    <div class="gallery">
+      <a target="_blank" href="{% static 'images/2for4.jpg' %}">
+        <img src="{% static 'images/2for4.jpg' %}" alt="2for4" width="300" height="200">
+      </a>
+      <div class="desc" id="sale">Our Special Sale!</div>
+    </div>
+
+    <div class="gallery">
+      <a target="_blank" href="{% static 'images/logoevolution.png' %}">
+        <img src="{% static 'images/logoevolution.png' %}" alt="Logo Evolution" width="300" height="200">
+      </a>
+      <div class="desc" id="evol">Our Logo Evolution!</div>
+    </div>
+
+    <div class="gallery">
+      <a target="_blank" href="{% static 'images/women.jpg' %}">
+        <img src="{% static 'images/women.jpg' %}" alt="Womens' Day" width="300" height="200">
+      </a>
+      <div class="desc" id="women">Turning the Sign for Womens' Day</div>
+    </div>
+
+  </div>
+  </div>
+  </div>
+  </div>
+  <style>
+    div.gallery {
+        margin: 5px;
+        border: 1px solid #ccc;
+        float: left;
+        width: 180px;
+        margin-bottom: 60px;
+    }
+
+    div.gallery:hover {
+        border: 1px solid #777;
+    }
+
+    div.gallery img {
+        width: 100%;
+        height: auto;
+    }
+
+    div.desc {
+        padding: 15px;
+        text-align: center;
+    }
+    #cheeseburger{
+      padding-bottom: 140px;
+    }
+    #branch{
+      padding-bottom: 117px;
+    }
+    #guacamole{
+      padding-bottom: 110px;
+    }
+    #french_fries{
+      padding-bottom: 62px;
+    }
+    #app{
+      padding-bottom: 60px;
+    }
+    #sale{
+      padding-bottom: 105px;
+    }
+    #evol{
+      padding-bottom: 110px;
+    }
+    #women{
+      padding-bottom: 60px;
+    }
+  </style>
+{% endblock %}

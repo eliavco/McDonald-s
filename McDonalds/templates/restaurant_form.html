@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block body_block %}
+  <div class="jumbotron">
+    {% if not form.instance.pk %}
+    <h1 class="display-4">Create a Branch!</h1>
+    {% else %}
+    <h1 class="display-4">Edit a Branch!</h1>
+    {% endif %}
+    <p> </p>
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" class="btn btn-success" value="Create">
+      <a href="{% url 'home:list' %}"><button type="button" class="btn btn-secondary">Cancel</button></a>
+    </form>
+    <p> </p>
+  </div>
+{% endblock %}

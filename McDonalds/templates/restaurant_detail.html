@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block body_block %}
+  <div class="jumbotron">
+    <a href="{% url 'home:list' %}"><button type="button" class="btn btn-dark"><i class="fas fa-backward"></i> Back</button></a>
+    <a href="{% url 'home:update' pk=restaurant_details.pk %}"><button type="button" class="btn btn-info"><i class="fas fa-edit"></i> Update</button></a>
+    <a href="{% url 'home:delete' pk=restaurant_details.pk %}"><button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i> Delete</button></a><br>
+    <p> </p>
+    <h1 class="display-4">Branch Details:</h1>
+    <p class="lead"><strong>Id_num: </strong>{{restaurant_details.id}}</p>
+    <p class="lead"><strong>Name: </strong>{{restaurant_details.name}}</p>
+    <p class="lead"><strong>Chef: </strong>{{restaurant_details.chef}}</p>
+    <p class="lead"><strong>Location: </strong>{{restaurant_details.country}}</p><br>
+
+    <h3 class="lead head3">Workers:</h3>
+
+      {% for worker in restaurant_details.workers.all %}
+        <p class="lead"><strong>{{worker.name}} </strong>who is <strong>{{worker.age}} </strong>years old.</p>
+      {% endfor %}
+
+    <hr class="my-4">
+    <p>In Order to Employ Workers go to 'admin/' and use your superuser permission...</p>
+  </div>
+{% endblock %}
